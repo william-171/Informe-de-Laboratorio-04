@@ -1,0 +1,56 @@
+\section{Procedimientos}
+
+Tomando como base el laboratorio anterior se construyo un cubo básico Multidimensional, pero se tenia dificultad al momento de explotar la información. Este detalle se debe a que no tuvimos un manejo más personalizado de los atributos de las dimensiones. En este laboratorio se abordará como crear y configurar una dimensión regular en Analysis Services.
+\begin{center}
+\end{center}
+
+\section{EJERCICIO 01: Creación de una Dimensión Regular} 
+
+\textbf{}\\\\
+En el Solution Explorer nos ubicamos en Data Sources View y podemos ver que tenemos la vista de las siguientes tablas:
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/1}\newline
+\end{center}
+
+Nos abrirá un Wizard, donde la primera ventana es un resumen de lo que se puede realizar.
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/2}\newline
+\end{center}
+
+
+
+Esta paso en el wizard es muy importante ya que nos permite seleccionar el origen de la dimensión a crear. 
+Seleccionamos la primera opción:
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/3}\newline
+\end{center}
+
+Seleccionamos el Data source view (podríamos tener más de uno) y la tabla Dimensión, en este ejemplo DimProduct. En Key columns por defecto siempre selecciona al Primary Key de la tabla, pero este valor luego podría ser cambiado. También podemos añadirle un Name Column a este Key column pero lo dejaremos tal como esta:
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/4}\newline
+\end{center}
+
+Marcamos los atributos con los cuales trabajaremos:
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/5}\newline
+\end{center}
+
+Indicamos el Nombre a la dimensión:
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/6}\newline
+\end{center}
+
+
+\section{EJERCICIO 02: Procesar una Dimensión} 
+
+Ya creada la dimensión, el siguiente paso es Procesarla para ver la generación de los datos. En la pestaña de Dimension Structure ubicamos la opción de Process:
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/1}\newline
+\end{center}
+
+
+Es aquí donde detectamos que si bien es cierto nos muestra los valores de Product Key , lo recomendable es que este atributo no sea visible para el usuario final, ya que esta es una llave propia del DW
+\begin{center}
+\includegraphics[width=\columnwidth]{images/task1/7}\newline
+\end{center}
+
